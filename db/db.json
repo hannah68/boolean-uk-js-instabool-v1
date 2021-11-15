@@ -1,0 +1,43 @@
+{
+  "images": [
+    {
+      "id": 1,
+      "title": "Coder dog",
+      "likes": 13,
+      "image": "./assets/coder-dog.png"
+    },
+    {
+      "id": 2,
+      "title": "Coder cats",
+      "likes": 10,
+      "image": "./assets/coder-cat.jpeg"
+    }
+  ],
+  "comments": [
+    {
+      "id": 3,
+      "content": "Someone's in trouble!",
+      "imageId": 2
+    },
+    {
+      "imageId": 1,
+      "content": "Funny dog!!",
+      "id": 4
+    },
+    {
+      "imageId": 1,
+      "content": "Hes a good boy!!",
+      "id": 5
+    },
+    {
+      "content": "my coder dog is great",
+      "imageId": 1,
+      "id": 8
+    },
+    {
+      "content": "I used to love dogs until I discovered cats",
+      "imageId": 2,
+      "id": 9
+    }
+  ]
+}
