@@ -197,7 +197,6 @@ const fetchImagesData = () => {
     .then(res => res.json())
     .then(data => {
         setState({posts: data});
-        state.posts = data
     })
 }
 
