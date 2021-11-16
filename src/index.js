@@ -7,6 +7,7 @@ let state = {
 
 const setState = (newState) => {
     state = {...state,...newState};
+    console.log('first state: ', state);
     renderFn(state);
 }
 
@@ -156,7 +157,6 @@ const renderCards = (post) => {
 
 // create new post================================================
 const createNewPost = (title,imgUrl) => {
-    setState({inputTitle:title, inputImage: imgUrl});
     fetch('http://localhost:3000/images', {
         method: 'POST',
         headers: {
@@ -185,6 +185,7 @@ const listenToNewPost = () => {
         const image = commentForm.querySelector('#image');
         const inputTitle = input.value;
         const imageUrl = image.value;
+        setState({inputTitle:inputTitle, inputImage: imageUrl});
         createNewPost(inputTitle, imageUrl);
     })
 }
@@ -195,8 +196,8 @@ const fetchImagesData = () => {
     fetch('http://localhost:3000/images')
     .then(res => res.json())
     .then(data => {
-        console.log(data);
         setState({posts: data});
+        state.posts = data
     })
 }
 
